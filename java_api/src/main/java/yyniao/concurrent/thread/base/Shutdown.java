@@ -11,14 +11,14 @@ public class Shutdown {
         ct1.start();
 
         //睡眠1s，main对ct2进行中断，ct感知中断结束
-        SleepUtil.second(1);
+        SleepUtils.second(1);
         ct1.interrupt();
 
         CountRunner target = new CountRunner();
         Thread ct2 = new Thread(target, "CT2");
         ct2.start();
         //睡眠1s，main对ct2进行cancel，ct感知结束
-        SleepUtil.second(1);
+        SleepUtils.second(1);
         target.cancel();
     }
 

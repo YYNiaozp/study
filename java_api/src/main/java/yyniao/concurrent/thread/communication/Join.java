@@ -1,6 +1,6 @@
 package yyniao.concurrent.thread.communication;
 
-import com.yyniao.concurrent.thread.base.SleepUtil;
+import yyniao.concurrent.thread.base.SleepUtils;
 
 /**
  * @Author: zhang.peng(zhang.peng @ yottabyte.cn)
@@ -16,7 +16,7 @@ public class Join {
             previous = thread;
         }
 
-        SleepUtil.second(5);
+        SleepUtils.second(5);
         System.out.println(Thread.currentThread().getName() + " terminate.");
     }
 

@@ -16,4 +16,8 @@ public class WaitTimeout {
         }
         return defaultV;
     }
+
+    public static void main(String[] args) {
+
+    }
 }

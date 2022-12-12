@@ -1,6 +1,7 @@
 package yyniao.concurrent.ForkJoinPool.impl;
 
-import com.yyniao.concurrent.ForkJoinPool.AbstractCaculator;
+
+import yyniao.concurrent.ForkJoinPool.AbstractCaculator;
 
 import java.util.ArrayList;
 import java.util.List;

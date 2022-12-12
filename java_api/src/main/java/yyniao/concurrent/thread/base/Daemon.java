@@ -15,7 +15,7 @@ public class Daemon {
         @Override
         public void run() {
             try {
-                SleepUtil.second(3);
+                SleepUtils.second(3);
             } finally {
                 //在构建Daemon线程时，不能依靠finally块中的内容来确保执行关闭或清理资源的逻辑
                 //not execute

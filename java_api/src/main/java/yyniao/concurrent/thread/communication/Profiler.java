@@ -1,6 +1,6 @@
 package yyniao.concurrent.thread.communication;
 
-import com.yyniao.concurrent.thread.base.SleepUtil;
+import yyniao.concurrent.thread.base.SleepUtils;
 
 /**
  * @Author: zhang.peng(zhang.peng @ yottabyte.cn)
@@ -20,7 +20,7 @@ public class Profiler {
 
     public static void main(String[] args) {
         Profiler.begin();
-        SleepUtil.second(1);
+        SleepUtils.second(1);
         System.out.printf("Cost: %d mills", Profiler.end());
     }
 }

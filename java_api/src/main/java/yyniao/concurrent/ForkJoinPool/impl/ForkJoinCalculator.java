@@ -1,6 +1,6 @@
 package yyniao.concurrent.ForkJoinPool.impl;
 
-import com.yyniao.concurrent.ForkJoinPool.AbstractCaculator;
+import yyniao.concurrent.ForkJoinPool.AbstractCaculator;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;

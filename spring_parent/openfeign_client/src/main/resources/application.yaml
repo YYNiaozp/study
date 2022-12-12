@@ -1,0 +1,21 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: feignClient
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      DEFAULT_ZONE: https://localhost:8761/eureka/
+
+#日志配置
+logging:
+  level:
+    com:
+      yyniao: debug

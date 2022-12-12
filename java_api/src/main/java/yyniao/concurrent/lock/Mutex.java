@@ -37,6 +37,17 @@ public class Mutex {
             return getState() == 1;
         }
 
+
+        @Override
+        protected int tryAcquireShared(int arg) {
+            return super.tryAcquireShared(arg);
+        }
+
+        @Override
+        protected boolean tryReleaseShared(int arg) {
+            return super.tryReleaseShared(arg);
+        }
+
         //返回Condition。每个Condition包含一个Condition队列
         Condition newCondition() {
             return new ConditionObject();

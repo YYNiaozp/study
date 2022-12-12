@@ -17,21 +17,21 @@ public class Interrupted {
         bt.start();
 
         //休眠5s, 让st，bt充分运行
-        SleepUtil.second(5);
+        SleepUtils.second(5);
         st.interrupt();
         bt.interrupt();
         System.out.println("ST interrupted is " + st.isInterrupted());
         System.out.println("BT interrupted is " + bt.isInterrupted());
 
         //防止st，bt立即退出
-        SleepUtil.second(2);
+        SleepUtils.second(2);
     }
 
 
     static class SleepRunner implements Runnable{
         @Override
         public void run() {
-            SleepUtil.second(10);
+            SleepUtils.second(10);
         }
     }
 

@@ -1,6 +1,6 @@
 package yyniao.concurrent.thread.communication;
 
-import com.yyniao.concurrent.thread.base.SleepUtil;
+import yyniao.concurrent.thread.base.SleepUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,7 +13,7 @@ public class WaitNotify {
     public static void main(String[] args) {
         Thread wt = new Thread(new Wait(), "WT");
         wt.start();
-        SleepUtil.second(5);
+        SleepUtils.second(5);
         Thread nt = new Thread(new Notify(), "NT");
         nt.start();
     }
@@ -54,13 +54,13 @@ public class WaitNotify {
                         + new SimpleDateFormat("HH:mm:ss").format(new Date()));
                 flag = false;
                 lock.notifyAll();
-                SleepUtil.second(5);
+                SleepUtils.second(5);
             }
             //再次加锁
             synchronized (lock) {
                 System.out.println(Thread.currentThread() + " hold lock again. notify @ "
                         + new SimpleDateFormat("HH:mm:ss").format(new Date()));
-                SleepUtil.second(5);
+                SleepUtils.second(5);
             }
         }
     }

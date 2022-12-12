@@ -1,0 +1,26 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eurekaServer
+
+#https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/appendix.html
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false   # 客户端注册
+    fetch-registry: false         # 客户端获取注册表
+    service-url:
+      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false #自我保护机制
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: off
+        discovery: off
+

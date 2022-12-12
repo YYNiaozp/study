@@ -1,6 +1,6 @@
 package yyniao.concurrent.thread.application;
 
-import com.yyniao.concurrent.thread.base.SleepUtil;
+import yyniao.concurrent.thread.base.SleepUtils;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -65,7 +65,7 @@ class ConnectionDriver {
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             if (method.getName().equals("commit")) {
-                SleepUtil.second(1);
+                SleepUtils.second(1);
             }
             return null;
         }

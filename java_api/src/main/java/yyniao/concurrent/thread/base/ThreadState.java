@@ -18,7 +18,7 @@ public class ThreadState {
         @Override
         public void run() {
             while (true) {
-                SleepUtil.second(100);
+                SleepUtils.second(100);
             }
         }
     }
@@ -44,7 +44,7 @@ public class ThreadState {
         public void run() {
              synchronized (Blocked.class){
                  while (true){
-                     SleepUtil.second(100);
+                     SleepUtils.second(100);
                  }
              }
         }
