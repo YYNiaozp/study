@@ -17,7 +17,7 @@ public class _283moveZeroes {
     public void moveZeroes(int[] nums) {
         for (int i = 0, n = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
-                if (n!=i){
+                if (n != i) {
                     nums[n] = nums[i];
                     nums[i] = 0;
                 }

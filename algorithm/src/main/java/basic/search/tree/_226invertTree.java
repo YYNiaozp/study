@@ -4,6 +4,10 @@ package basic.search.tree;
  * @Author: zhangpeng
  * @Date: 2022/8/22 00:13
  */
+
+/**
+ * 226. 翻转二叉树
+ */
 public class _226invertTree {
     public TreeNode invertTree(TreeNode root) {
         return dfs(root);

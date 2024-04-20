@@ -1,0 +1,11 @@
+FORMAT=1
+WS=2
+LP=3
+RP=4
+COMMA=5
+ASSIGN=6
+STRING=7
+'('=3
+')'=4
+','=5
+'='=6

@@ -10,6 +10,13 @@ import java.util.Set;
  * @Author: zhangpeng
  * @Date: 2022/8/19 00:22
  */
+
+/**
+ * 139. 单词拆分
+ * 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。
+ *
+ * 注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。
+ */
 public class _139wordBreak {
 
     public boolean wordBreak(String s, List<String> wordDict) {

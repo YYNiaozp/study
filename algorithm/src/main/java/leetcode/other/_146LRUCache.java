@@ -80,7 +80,11 @@ public class _146LRUCache {
 
     public void put(int key, int value) {
         DLinkedNode node = cache.get(key);
-        if (node == null){
+        if (node != null){
+            // 如果 key 存在，先通过哈希表定位，再修改 value，并移到头部
+            node.val = value;
+            moveToHead(node);
+        } else {
             node = new DLinkedNode(key, value);
             cache.put(key, node);
             addToHead(node);
@@ -90,10 +94,6 @@ public class _146LRUCache {
                 cache.remove(tail.key);
                 --size;
             }
-        } else {
-            // 如果 key 存在，先通过哈希表定位，再修改 value，并移到头部
-            node.val = value;
-            moveToHead(node);
         }
     }
 }

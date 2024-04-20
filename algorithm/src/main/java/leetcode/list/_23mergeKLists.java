@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.list;
 
 import java.util.PriorityQueue;
 
@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * @Date: 2022/9/2 01:02
  */
 public class _23mergeKLists {
-    PriorityQueue<Status> queue = new PriorityQueue<Status>();
+    PriorityQueue<Status> queue = new PriorityQueue<>();
 
     public ListNode mergeKLists(ListNode[] lists) {
         for (ListNode node : lists) {
@@ -40,22 +40,5 @@ public class _23mergeKLists {
         public int compareTo(Status status2) {
             return this.val - status2.val;
         }
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }

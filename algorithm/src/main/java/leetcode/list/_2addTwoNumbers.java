@@ -13,6 +13,32 @@ package leetcode.list;
  * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
  */
 public class _2addTwoNumbers {
+    //perfect
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        ListNode head = new ListNode();
+        ListNode tail = head;
+        int i = 0;
+        while (l1 != null || l2 != null) {
+            int j = i;
+            if (l1 != null) {
+                j += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                j += l2.val;
+                l2 = l2.next;
+            }
+            i = j / 10; //进位
+            tail.next = new ListNode(j % 10);   //保留余数，构造节点
+            tail = tail.next;
+        }
+        if (i != 0) {
+            tail.next = new ListNode(i);
+        }
+        return head.next;
+    }
+
+    @Deprecated
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode();
         ListNode tail = head;

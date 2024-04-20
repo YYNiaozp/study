@@ -1,9 +1,5 @@
 package leetcode.array;
 
-import com.sun.org.apache.bcel.internal.generic.IAND;
-
-import java.util.Arrays;
-
 /**
  * @Author: zhangpeng
  * @Date: 2022/8/22 01:00

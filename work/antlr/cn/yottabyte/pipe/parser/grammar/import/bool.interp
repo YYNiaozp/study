@@ -1,0 +1,16 @@
+token literal names:
+null
+'true'
+'false'
+
+token symbolic names:
+null
+TRUE
+FALSE
+
+rule names:
+bool_literal
+
+
+atn:
+[4, 1, 2, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 2, 3, 0, 2, 1, 0, 0, 0, 2, 3, 7, 0, 0, 0, 3, 1, 1, 0, 0, 0, 0]
